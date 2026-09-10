@@ -1,0 +1,26 @@
+{
+  "name": "polymarket-trading-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-shaped Polymarket execution bot with paper trading, risk limits, and CLOB order flow.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "paper": "tsx src/index.ts --mode paper",
+    "test": "tsx --test src/**/*.test.ts"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
